@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+       <script>
+    // 120 квартир поъезда (по 30 квартир) 6 этажей по 5-ть квартир на этаже
+	// вводим номер квартиры получаем ответ в каком парадном она находится 
+	// вводим номер квартиры получаем ответ в каком парадном и этаж где она находится
+    
+
+    let kw = 120;
+    let x = 30;
+    let podezd =  kw/x; //количество подъездов
+    let etazh = 6; //количество этажей
+    let y = 5; //количество квартир на этаже
+
+    let nomer_kwartiry = +prompt ("Введите номер квартиры, от 1 до 120");
+
+    if (nomer_kwartiry>0 && nomer_kwartiry<=kw) {
+                document.write ("Номер квартиры: " + nomer_kwartiry + ";" + "<br/>");
+        
+        for (var i = 1; i <= podezd; i++){
+
+            if (x * i >= nomer_kwartiry) {
+                document.write ("Подъезд: " + i + ";" + "<br/>");
+                        
+                    for (let j = 1; j <= etazh; j++) {
+
+                        if ((i-1) * x + j * y >= nomer_kwartiry) {
+                            document.write ("Этаж: " + j + "." + "<br/>");
+                            break;
+                        }
+                    }
+                    break;
+            }
+        }
+    }
+    else {
+        document.write ("Такой квартиры в доме нет");
+        }           
+
+   </script>
+</head>
+<body>
+    
+</body>
+</html>
