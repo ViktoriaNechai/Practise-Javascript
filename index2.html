@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <script>
+// Задача 7
+   // Смотря на индекс родительского масива доставать количество элементов дочернего
+   // результат выдода в console.log
+   //ничего
+   //8
+   //6,3
+   //-2,-33,44
+      let arr = [
+      [4,-6,22,2],
+      [8,34,-12,4],
+      [6,3,21,56],
+      [-2,-33,44,1]
+      ] 
+   console.log(arr);
+    
+
+   for (var i = 0; i < arr.length; i++) {
+      for (var j = 0; j < arr[i].length; j++) {
+         document.write(arr[i][j] + " , ");  
+      } 
+      document.write("<br>");
+   } 
+   document.write("<hr>"); 
+  
+
+   for (var i = 0; i < arr.length; i++) {
+      for (var j = 0; j < arr[i].length; j++) {
+         if(j >= i){
+            document.write("  ");   
+         }
+         else{ document.write(arr[i][j] + "  ");
+         }        
+       
+      }
+      document.write("<br>");            
+   }
+
+   </script>
+</head>
+<body>
+   
+</body>
+</html>
